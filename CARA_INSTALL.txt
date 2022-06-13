@@ -1,0 +1,56 @@
+PETUNJUK  INSTALL APLIKASI
+ 
+1. Nyalakan Webserver (Kalau belum ada install dulu , program xampp yg tersedia di folder web-server). 
+Untuk Windows XP, 7 dan Windows 8 – Rekomendasi Versi Xampp 1.7.3, sedangkan Windows 10 Gunakan Versi Xampp 7.0.9
+- untuk Linux, gunakan lampp atau install manual atau webserver sejenisnya.
+- untuk Windows, gunakan Xampp, uWamp (rekomendasi - www.uwamp.com), atau sejenisnya.
+2. copy folder mub ke htdocs atau www atau public_html
+-  untuk linux lammp ada di /opt/lampp/htdocs/
+-  khusus untuk linux, mac atau windows yg ada proteksi akses, pastikan folder mub/uploads/* adalah WRITEABLE agar dapat upload user pic.
+3. buka phpmyadmin, lalu buat database baru dengan nama misal mub_koperasi
+4. pilih db yg telah dibuat tadi, lalu import file mub.sql melalui phpmyadmin
+5. buka file mub/application/config/database.php
+lihat baris 51 kebawah
+ 
+ubah bagian ini:
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'mub_koperasi';
+Ubah sesuai aturan webserver Anda.
+ 
+6. Opsional (boleh diubah, boleh tidak)
+- buka file mub/application/config/config.php
+pada baris 237, silahkan ubah sesuai keinginan
+$config['encryption_key'] = 'siskomob';
+pada baris 257, silahkan ubah sesuai keinginan
+$config['sess_cookie_name'] = 'koperasi_mub';
+ 
+7. Untuk Ubah gambar Logo Koperasi, silahkan replace gambar file berikut:
+mub/assets/theme_admin/img/logo.png dan
+mub/assets/theme_admin/img/logo2.png
+(sesuaikan ukuran proporsional)
+ 
+8. Untuk Ubah gambar LOGIN, silahkan replace gambar file berikut:
+mub/assets/theme_admin/img/tulisan.png
+(sesuaikan ukuran proporsional)
+ 
+Lalu silahkan buka di browser:
+http://localhost/mub/
+User Level Admin
+- username: admin
+- password: admin
+User level Operator
+- username: user
+- password: user
+User level Pinjaman
+- username: pinjaman
+- Pass: pinjaman
+ 
+Catatan:
+- nama folder di public_html atau www "mub" dapat Anda ubah sesuai keinginan.
+ 
+===================================
+ 
+Terimakasih
+
