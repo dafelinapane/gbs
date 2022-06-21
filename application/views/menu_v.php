@@ -1,8 +1,8 @@
 <!-- search form -->
-<a href="<?php echo site_url();?>" class="logo">
-			<!-- Add the class icon to your logo image or logo icon to add the margining -->
-			 <div style="text-align:center;"><img height="50" src="<?php echo base_url().'assets/theme_admin/img/logo2.png'; ?>"></div>
-		</a>
+<!-- <a href="<?php echo site_url();?>" class="logo">
+	//Add the class icon to your logo image or logo icon to add the margining 
+		<div style="text-align:center;"><img height="50" src="<?php echo base_url().'assets/theme_admin/img/gbs-logo-v1.png'; ?>"></div>
+</a> -->
 <!-- /.search form -->
 
 <ul class="sidebar-menu">

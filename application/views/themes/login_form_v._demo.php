@@ -39,7 +39,7 @@
 
 			</p>
 		</div>	
-		<div class="header"><img height='60' src="<?php echo base_url().'assets/theme_admin/img/tulisan.png'; ?>"></div>
+		<div class="header"><img height='60' src="<?php echo base_url().'assets/theme_admin/img/gbs-logo.png'; ?>"></div>
 		<form action="" method="post">
 			<div class="body bg-gray">
 				<?php if($jenis == 'member') { ?>

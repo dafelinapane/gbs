@@ -27,7 +27,7 @@
 		
 	</p>
 	<div class="form-box" id="login-box">
-		<div class="header"><img height='60' src="<?php echo base_url().'assets/theme_admin/img/tulisan.png'; ?>"></div>
+		<div class="header"><img height=150' src="<?php echo base_url().'assets/theme_admin/img/gbs-logo-v1.png'; ?>"></div>
 		<form action="" method="post">
 			<div class="body bg-gray">
 				<?php if($jenis == 'member') { ?>
