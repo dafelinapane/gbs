@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Login-GBS</title>
+	<title>Login - GBS</title>
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/theme_admin/img/gbs-logo-v1.png" type="image/x-icon" />
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 	<!-- bootstrap 3.0.2 -->
