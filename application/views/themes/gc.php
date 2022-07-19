@@ -58,7 +58,9 @@ ob_end_flush();
 	<header class="header">
 		<a href="<?php echo site_url();?>" class="logo">
 			<!-- Add the class icon to your logo image or logo icon to add the margining -->
-			Koperasi
+			<div style="text-align:left;"><img height="45" src="<?php echo base_url().'assets/theme_admin/img/gbs-logo-v1.png'; ?>">
+				Koperasi Indonesia
+			</div>
 		</a>
 		<!-- Header Navbar: style can be found in header.less -->
 		<nav class="navbar navbar-static-top" role="navigation">

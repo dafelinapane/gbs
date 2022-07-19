@@ -45,6 +45,10 @@
 	<script type="text/javascript">
     $(document).ready(function(){    
       $(".jam").clock({"format":"24","calendar":"false"});
+	  $(".hasDatepicker").datepicker(
+		changeYear: true,
+     	yearRange: "1930:2010"
+	  );
     });    
   </script>
 	
