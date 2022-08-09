@@ -83,7 +83,7 @@
 	<table  class="table table-bordered">
 		<tr class="header_kolom">
 			<th class="h_tengah" style="width:5%; vertical-align: middle " > No. </th>
-			<th class="h_tengah" style="width:8%; vertical-align: middle"> Kode <br>Transaksi</th>
+			<!-- <th class="h_tengah" style="width:8%; vertical-align: middle"> Kode <br>Transaksi</th> -->
 			<th class="h_tengah" style="width:8%; vertical-align: middle"> Tanggal Transaksi</th>
 			<th class="h_tengah" style="width:29%; vertical-align: middle"> Akun Transaksi </th>
 			<th class="h_tengah" style="width:10%; vertical-align: middle"> Dari Kas  </th>
@@ -155,10 +155,11 @@
 			$untuk_kas = $untuk_kas->nama; }
 
 		$nm_akun = $this->lap_trans_kas_m->get_nama_akun_id($row->transaksi);
+		// <td class="h_tengah" style="vertical-align:middle"> '.$kode.sprintf('%05d', $row->id).'</td>
 		echo '
 			<tr bgcolor='.$warna.'>
 					<td class="h_tengah" style="vertical-align:middle">'.$no++.'</td>
-					<td class="h_tengah" style="vertical-align:middle"> '.$kode.sprintf('%05d', $row->id).'</td>
+					
 					<td class="h_tengah" style="vertical-align:middle"> '.$txt_tanggal.'</td>
 					<td class="h_kiri" style="vertical-align:middle"> '.@$nm_akun->jns_trans.' <br><code>'.$row->ket.'</code></td>
 					<td class="h_kiri" style="vertical-align:middle"> '.$dari_kas.'</td>

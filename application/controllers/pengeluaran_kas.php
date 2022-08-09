@@ -131,7 +131,8 @@ class Pengeluaran_kas extends OperatorController {
 		$pdf = new Pdf('L', 'mm', 'A4', true, 'UTF-8', false);
 		$pdf->set_nsi_header(TRUE);
 		$pdf->AddPage('L');
-		$html = '';
+		$html = ''; 
+		// <th class="h_tengah" style="width:10%;"> No Transaksi</th>
 		$html .= '
 		<style>
 			.h_tengah {text-align: center;}
@@ -147,7 +148,6 @@ class Pengeluaran_kas extends OperatorController {
 		<table width="100%" cellspacing="0" cellpadding="3" border="1" border-collapse= "collapse">
 			<tr class="header_kolom">
 				<th class="h_tengah" style="width:5%;" > No. </th>
-				<th class="h_tengah" style="width:10%;"> No Transaksi</th>
 				<th class="h_tengah" style="width:15%;"> Tanggal </th>
 				<th class="h_tengah" style="width:40%;"> Uraian  </th>
 				<th class="h_tengah" style="width:20%;"> Jumlah  </th>

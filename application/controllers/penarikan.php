@@ -199,6 +199,7 @@ class Penarikan extends OperatorController {
 		$pdf->set_nsi_header(TRUE);
 		$pdf->AddPage('L');
 		$html = '';
+		//  <th class="h_tengah" style="width:8%;"> No Transaksi</th>
 		$html .= '
 		<style>
 			.h_tengah {text-align: center;}
@@ -214,7 +215,6 @@ class Penarikan extends OperatorController {
 		<table width="100%" cellspacing="0" cellpadding="3" border="1" border-collapse= "collapse">
 			<tr class="header_kolom">
 				<th class="h_tengah" style="width:5%;" > No. </th>
-				<th class="h_tengah" style="width:8%;"> No Transaksi</th>
 				<th class="h_tengah" style="width:7%;"> Tanggal </th>
 				<th class="h_tengah" style="width:25%;"> Nama Anggota </th>
 				<th class="h_tengah" style="width:13%;"> Dept </th>

@@ -39,7 +39,7 @@ striped="true">
 <thead>
 	<tr>
 		<th data-options="field:'id', sortable:'true',halign:'center', align:'center'" hidden="true">ID</th>
-		<th data-options="field:'id_txt', width:'17', halign:'center', align:'center'">Kode Transaksi</th>
+		<!-- <th data-options="field:'id_txt', width:'17', halign:'center', align:'center'">Kode Transaksi</th> -->
 		<th data-options="field:'tgl_transaksi',halign:'center', align:'center'" hidden="true">Tanggal</th>
 		<th data-options="field:'tgl_transaksi_txt', width:'20', halign:'center', align:'center'">Tanggal Transaksi</th>
 		<th data-options="field:'ket', width:'30', halign:'center', align:'left'">Uraian</th>

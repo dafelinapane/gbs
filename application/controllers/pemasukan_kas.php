@@ -142,7 +142,8 @@ class Pemasukan_kas extends OperatorController {
 		$pdf = new Pdf('L', 'mm', 'A4', true, 'UTF-8', false);
 		$pdf->set_nsi_header(TRUE);
 		$pdf->AddPage('L');
-		$html = '';
+		$html = ''; 
+		// <th class="h_tengah" style="width:10%;"> No Transaksi</th>
 		$html .= '
 		<style>
 			.h_tengah {text-align: center;}
@@ -159,11 +160,10 @@ class Pemasukan_kas extends OperatorController {
 		<table width="100%" cellspacing="0" cellpadding="3" border="1" border-collapse= "collapse">
 		<tr class="header_kolom">
 			<th class="h_tengah" style="width:5%;" > No. </th>
-			<th class="h_tengah" style="width:10%;"> No Transaksi</th>
 			<th class="h_tengah" style="width:15%;"> Tanggal </th>
-			<th class="h_tengah" style="width:40%;"> Uraian  </th>
-			<th class="h_tengah" style="width:20%;"> Jumlah  </th>
 			<th class="h_tengah" style="width:10%;"> User </th>
+			<th class="h_tengah" style="width:40%;"> Uraian  </th>
+			<th class="h_tengah" style="width:20%;"> Jumlah  </th> 
 		</tr>';
 
 		$no =1;
@@ -176,14 +176,14 @@ class Pemasukan_kas extends OperatorController {
 			$txt_tanggal = jin_date_ina($tgl_bayar[0],'p');
 
 			$jml_tot += $row->jumlah;
+			// <td class="h_tengah"> '.'TKD'.sprintf('%05d', $row->id).'</td>
 			$html .= '
 			<tr>
-				<td class="h_tengah" >'.$no++.'</td>
-				<td class="h_tengah"> '.'TKD'.sprintf('%05d', $row->id).'</td>
+				<td class="h_tengah" >'.$no++.'</td> 
 				<td class="h_tengah"> '.$txt_tanggal.'</td>
+				<td> '.$row->user_name.'</td>
 				<td class="h_kiri"> '.$row->keterangan.'</td>
 				<td class="h_kanan"> '.number_format($row->jumlah).'</td>
-				<td> '.$row->user_name.'</td>
 			</tr>';
 		}
 		$html .= '
