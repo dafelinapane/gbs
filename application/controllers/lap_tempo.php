@@ -102,10 +102,10 @@ public function __construct() {
 	             .header_kolom {background-color: #cccccc; text-align: center; font-weight: bold;}
          		</style>
          '.$pdf->nsi_box($text = '<span class="txt_judul">Laporan Pembayaran Jatuh Tempo Periode '.$periode.' </span>', $width = '100%', $spacing = '1', $padding = '1', $border = '0', $align = 'center').'';
+		//  <th style="width:10%;"> Kode Pinjam</th>
       $html.='<table width="100%" cellspacing="0" cellpadding="3" border="1">
 		<tr class="header_kolom">
-			<th style="width:5%;" > No. </th>
-			<th style="width:10%;"> Kode Pinjam</th>
+			<th style="width:5%;" > No. </th> 
 			<th style="width:16%;"> Anggota</th>
 			<th style="width:11%;"> Tanggal Pinjam  </th>
 			<th style="width:11%;"> Tanggal Tempo  </th>
@@ -139,10 +139,10 @@ public function __construct() {
 			$jml_dibayar += $jml_bayar->total;
 			$jml_sisa += $sisa_tagihan;
 
+			// <td class="h_tengah"> '.'TPJ' . sprintf('%05d', $rows->id) . ''.'</td>
 			$html.='
 				<tr>
 					<td class="h_tengah"> '.$no++.'</td>
-					<td class="h_tengah"> '.'TPJ' . sprintf('%05d', $rows->id) . ''.'</td>
 					<td> '.$anggota->identitas.'<br> '.$anggota->nama.'</td>
 					<td class="h_tengah"> '.$tgl_pinjam.'</td>
 					<td class="h_tengah"> '.$tgl_tempo.'</td>

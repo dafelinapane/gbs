@@ -149,9 +149,9 @@ class Pengeluaran_kas extends OperatorController {
 			<tr class="header_kolom">
 				<th class="h_tengah" style="width:5%;" > No. </th>
 				<th class="h_tengah" style="width:15%;"> Tanggal </th>
+				<th class="h_tengah" style="width:10%;"> User </th>
 				<th class="h_tengah" style="width:40%;"> Uraian  </th>
 				<th class="h_tengah" style="width:20%;"> Jumlah  </th>
-				<th class="h_tengah" style="width:10%;"> User </th>
 			</tr>';
 
 			$no =1;
@@ -161,15 +161,14 @@ class Pengeluaran_kas extends OperatorController {
 				$txt_tanggal = jin_date_ina($tgl_bayar[0],'p');
 
 				$jml_tot += $row->jumlah;
-
+				// <td class="h_tengah"> '.'TKK'.sprintf('%05d', $row->id).'</td>
 				$html .= '
 				<tr>
-					<td class="h_tengah" >'.$no++.'</td>
-					<td class="h_tengah"> '.'TKK'.sprintf('%05d', $row->id).'</td>
+					<td class="h_tengah" >'.$no++.'</td> 
 					<td class="h_tengah"> '.$txt_tanggal.'</td>
+					<td> '.$row->user_name.'</td>
 					<td class="h_kiri"> '.$row->keterangan.'</td>
 					<td class="h_kanan"> '.number_format($row->jumlah).'</td>
-					<td> '.$row->user_name.'</td>
 				</tr>';
 			}
 			$html .= '
